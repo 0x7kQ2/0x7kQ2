@@ -1,4 +1,4 @@
-name: CVE Dashboard
+name: Profile dashboards
 
 on:
   schedule:
@@ -7,7 +7,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "scripts/generate-cve-dashboard.js"
+      - "scripts/**"
       - ".github/workflows/main.yml"
 
 jobs:
@@ -23,20 +23,23 @@ jobs:
         with:
           node-version: 22
 
-      - name: Generate dashboard SVG
+      - name: Generate CVE dashboard
         run: node scripts/generate-cve-dashboard.js
+
+      - name: Generate Exploit-DB ticker
+        run: node scripts/generate-exploitdb-ticker.js
 
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add svgs/cve-dashboard.svg
+          git add svgs/cve-dashboard.svg svgs/exploitdb-ticker.svg
 
           if git diff --staged --quiet; then
             echo "No changes"
             exit 0
           fi
 
-          git commit -m "update cve dashboard"
+          git commit -m "update profile dashboards"
           git push
