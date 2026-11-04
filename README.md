@@ -23,7 +23,7 @@
     <img
       src="./svgs/ct-sniffer.svg"
       alt="Certificate Transparency sniffer"
-      width="90%"
+      width="100%"
     />
   </a>
 </div>

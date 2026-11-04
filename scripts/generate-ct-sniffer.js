@@ -169,16 +169,16 @@ async function collectFromCT() {
     throw new Error("No CT DNS names found in recent log window");
   }
 
-  const W = 1200;
+  const W = 1400;
   const H = 250;
-  const midX = 600;
-  const pad = 22;
+  const midX = 700;
+  const pad = 28;
   const labelY = 56;
   const startY = 84;
   const lineHeight = 22;
   const leftX = pad;
-  const rightX = midX + 18;
-  const leftIssuerX = midX - 16;
+  const rightX = midX + 20;
+  const leftIssuerX = midX - 18;
   const rightIssuerX = W - pad;
 
   const leftRows = wildcards
@@ -186,8 +186,8 @@ async function collectFromCT() {
       const y = startY + i * lineHeight;
       return `
       <circle cx="${leftX + 4}" cy="${y - 4}" r="2.5" fill="#ff4d4d"/>
-      <text x="${leftX + 16}" y="${y}" fill="#79b8ff" font-size="14" font-family="Arial">${escapeXML(clip(v.name, 34))}</text>
-      <text x="${leftIssuerX}" y="${y}" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">${escapeXML(clip(v.issuer, 12))}</text>
+      <text x="${leftX + 16}" y="${y}" fill="#79b8ff" font-size="14" font-family="Arial">${escapeXML(clip(v.name, 42))}</text>
+      <text x="${leftIssuerX}" y="${y}" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">${escapeXML(clip(v.issuer, 14))}</text>
     `;
     })
     .join("");
@@ -197,8 +197,8 @@ async function collectFromCT() {
       const y = startY + i * lineHeight;
       return `
       <circle cx="${rightX + 4}" cy="${y - 4}" r="2.5" fill="#58a6ff"/>
-      <text x="${rightX + 16}" y="${y}" fill="#c9d1d9" font-size="14" font-family="Arial">${escapeXML(clip(v.name, 34))}</text>
-      <text x="${rightIssuerX}" y="${y}" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">${escapeXML(clip(v.issuer, 12))}</text>
+      <text x="${rightX + 16}" y="${y}" fill="#c9d1d9" font-size="14" font-family="Arial">${escapeXML(clip(v.name, 42))}</text>
+      <text x="${rightIssuerX}" y="${y}" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">${escapeXML(clip(v.issuer, 14))}</text>
     `;
     })
     .join("");
