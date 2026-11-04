@@ -1,0 +1,42 @@
+name: CVE Dashboard
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/generate-cve-dashboard.js"
+      - ".github/workflows/main.yml"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate dashboard SVG
+        run: node scripts/generate-cve-dashboard.js
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add svgs/cve-dashboard.svg
+
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git commit -m "update cve dashboard"
+          git push
