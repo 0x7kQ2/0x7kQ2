@@ -9,6 +9,16 @@
 
   <br/>
 
+  <a href="https://crt.sh/" target="_blank">
+    <img
+      src="./svgs/ct-sniffer.svg"
+      alt="Certificate Transparency sniffer"
+      width="100%"
+    />
+  </a>
+
+  <br/>
+
   <a href="https://www.exploit-db.com/" target="_blank">
     <img
       src="./svgs/exploitdb-ticker.svg"
