@@ -155,8 +155,8 @@ async function collectFromCT() {
 
   return {
     treeSize: sth.tree_size,
-    wildcards: dedupe(wild, 10),
-    names: dedupe(dns, 10)
+    wildcards: dedupe(wild, 6),
+    names: dedupe(dns, 6)
   };
 }
 
@@ -169,17 +169,20 @@ async function collectFromCT() {
     throw new Error("No CT DNS names found in recent log window");
   }
 
-  const leftX = 40;
+  const W = 1400;
+  const H = 210;
+  const startY = 62;
+  const lineHeight = 22;
+  const leftX = 28;
   const rightX = 720;
-  const startY = 110;
-  const lineHeight = 34;
 
   const leftRows = wildcards
     .map((v, i) => {
       const y = startY + i * lineHeight;
       return `
-      <text x="${leftX + 20}" y="${y}" fill="#58a6ff" font-size="15" font-family="Arial">${escapeXML(clip(v.name, 34))}</text>
-      <text x="${leftX + 390}" y="${y}" fill="#8b949e" font-size="14" font-family="Arial">${escapeXML(clip(v.issuer, 18))}</text>
+      <circle cx="${leftX}" cy="${y - 4}" r="2.5" fill="#ff4d4d"/>
+      <text x="${leftX + 12}" y="${y}" fill="#79b8ff" font-size="13" font-family="Arial">${escapeXML(clip(v.name, 42))}</text>
+      <text x="690" y="${y}" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">${escapeXML(clip(v.issuer, 14))}</text>
     `;
     })
     .join("");
@@ -188,72 +191,44 @@ async function collectFromCT() {
     .map((v, i) => {
       const y = startY + i * lineHeight;
       return `
-      <text x="${rightX + 20}" y="${y}" fill="#c9d1d9" font-size="15" font-family="Arial">${escapeXML(clip(v.name, 34))}</text>
-      <text x="${rightX + 390}" y="${y}" fill="#8b949e" font-size="14" font-family="Arial">${escapeXML(clip(v.issuer, 18))}</text>
+      <circle cx="${rightX}" cy="${y - 4}" r="2.5" fill="#58a6ff"/>
+      <text x="${rightX + 12}" y="${y}" fill="#c9d1d9" font-size="13" font-family="Arial">${escapeXML(clip(v.name, 42))}</text>
+      <text x="1372" y="${y}" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">${escapeXML(clip(v.issuer, 14))}</text>
     `;
     })
     .join("");
 
-  const svg = `
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="1400"
-  height="520"
-  viewBox="0 0 1400 520"
->
+  const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+  <rect width="${W}" height="${H}" rx="12" fill="#0d1117"/>
+  <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="11" fill="none" stroke="#21262d"/>
 
-  <rect width="1400" height="520" fill="#0d1117"/>
+  <!-- slim header -->
+  <rect x="0" y="0" width="${W}" height="36" rx="12" fill="#161b22"/>
+  <rect x="0" y="24" width="${W}" height="12" fill="#161b22"/>
+  <rect x="0" y="35" width="${W}" height="1" fill="#30363d"/>
 
-  <!-- LEFT PANEL -->
-  <rect
-    x="${leftX}"
-    y="40"
-    rx="20"
-    ry="20"
-    width="620"
-    height="390"
-    fill="#161b22"
-    stroke="#30363d"
-  />
+  <text x="28" y="24" fill="#8b949e" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="1.5">CT SNIFFER</text>
+  <text x="130" y="24" fill="#ff4d4d" font-size="12" font-family="Arial">wildcards</text>
+  <text x="210" y="24" fill="#6e7681" font-size="12" font-family="Arial">/</text>
+  <text x="222" y="24" fill="#58a6ff" font-size="12" font-family="Arial">fresh names</text>
+  <text x="1372" y="24" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">Argon2026h2 · ${escapeXML(String(treeSize))}</text>
 
-  <!-- RIGHT PANEL -->
-  <rect
-    x="${rightX}"
-    y="40"
-    rx="20"
-    ry="20"
-    width="620"
-    height="390"
-    fill="#161b22"
-    stroke="#30363d"
-  />
+  <!-- column labels -->
+  <text x="${leftX}" y="52" fill="#ff7b72" font-size="11" font-family="Arial" font-weight="bold">WILDCARD</text>
+  <text x="${rightX}" y="52" fill="#58a6ff" font-size="11" font-family="Arial" font-weight="bold">NAME</text>
 
-  <!-- LEFT TITLE -->
-  <text x="${leftX + 20}" y="75" fill="#ffffff" font-size="26" font-family="Arial" font-weight="bold">Live</text>
-  <text x="${leftX + 90}" y="75" fill="#ff4d4d" font-size="26" font-family="Arial" font-weight="bold">Wildcards</text>
-
-  <!-- RIGHT TITLE -->
-  <text x="${rightX + 20}" y="75" fill="#ff9f1a" font-size="26" font-family="Arial" font-weight="bold">Fresh</text>
-  <text x="${rightX + 110}" y="75" fill="#58a6ff" font-size="26" font-family="Arial" font-weight="bold">CT</text>
-  <text x="${rightX + 160}" y="75" fill="#ffffff" font-size="26" font-family="Arial" font-weight="bold">Names</text>
+  <line x1="710" y1="44" x2="710" y2="192" stroke="#21262d"/>
 
   ${leftRows}
   ${rightRows}
 
-  <!-- FOOTER -->
-  <text x="40" y="475" fill="#8b949e" font-size="15" font-family="Arial">
-    Source: Certificate Transparency — Google Argon2026h2
-  </text>
-
-  <text x="40" y="500" fill="#8b949e" font-size="15" font-family="Arial">
-    Auto updates every 30 minutes · tree ${escapeXML(String(treeSize))}
-  </text>
-
+  <text x="28" y="200" fill="#484f58" font-size="11" font-family="Arial">certificate transparency · updates every 30m</text>
 </svg>
 `;
 
   fs.writeFileSync("svgs/ct-sniffer.svg", svg);
   console.log(
-    `Generated ct-sniffer.svg (wildcards=${wildcards.length}, names=${names.length}, tree=${treeSize})`
+    `Generated ct-sniffer.svg (wildcards=${wildcards.length}, names=${names.length}, tree=${treeSize}, ${W}x${H})`
   );
 })();
