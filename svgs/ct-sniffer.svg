@@ -1,75 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="210" viewBox="0 0 1400 210">
-  <rect width="1400" height="210" rx="12" fill="#0d1117"/>
-  <rect x="1" y="1" width="1398" height="208" rx="11" fill="none" stroke="#21262d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="200" viewBox="0 0 960 200">
+  <rect width="960" height="200" rx="10" fill="#0d1117"/>
+  <rect x="1" y="1" width="958" height="198" rx="9" fill="none" stroke="#21262d"/>
 
-  <!-- slim header -->
-  <rect x="0" y="0" width="1400" height="36" rx="12" fill="#161b22"/>
-  <rect x="0" y="24" width="1400" height="12" fill="#161b22"/>
-  <rect x="0" y="35" width="1400" height="1" fill="#30363d"/>
+  <!-- header -->
+  <rect x="0" y="0" width="960" height="32" rx="10" fill="#161b22"/>
+  <rect x="0" y="22" width="960" height="10" fill="#161b22"/>
+  <rect x="0" y="31" width="960" height="1" fill="#30363d"/>
 
-  <text x="28" y="24" fill="#8b949e" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="1.5">CT SNIFFER</text>
-  <text x="130" y="24" fill="#ff4d4d" font-size="12" font-family="Arial">wildcards</text>
-  <text x="210" y="24" fill="#6e7681" font-size="12" font-family="Arial">/</text>
-  <text x="222" y="24" fill="#58a6ff" font-size="12" font-family="Arial">fresh names</text>
-  <text x="1372" y="24" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">Argon2026h2 · 3484704151</text>
+  <text x="18" y="21" fill="#8b949e" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1.2">CT SNIFFER</text>
+  <text x="942" y="21" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">Argon2026h2 · 3484742058</text>
 
-  <!-- column labels -->
-  <text x="28" y="52" fill="#ff7b72" font-size="11" font-family="Arial" font-weight="bold">WILDCARD</text>
-  <text x="720" y="52" fill="#58a6ff" font-size="11" font-family="Arial" font-weight="bold">NAME</text>
+  <!-- column labels (clear gap above first row) -->
+  <text x="18" y="48" fill="#ff7b72" font-size="10" font-family="Arial" font-weight="bold">WILDCARD</text>
+  <text x="494" y="48" fill="#58a6ff" font-size="10" font-family="Arial" font-weight="bold">NAME</text>
 
-  <line x1="710" y1="44" x2="710" y2="192" stroke="#21262d"/>
+  <line x1="480" y1="38" x2="480" y2="178" stroke="#21262d"/>
 
   
-      <circle cx="28" cy="58" r="2.5" fill="#ff4d4d"/>
-      <text x="40" y="62" fill="#79b8ff" font-size="13" font-family="Arial">*.vfk6ymi8dr.local.viam.cloud</text>
-      <text x="690" y="62" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">YR1</text>
+      <circle cx="22" cy="69" r="2" fill="#ff4d4d"/>
+      <text x="32" y="72" fill="#79b8ff" font-size="12" font-family="Arial">*.eso-fla88097.eastus2.azur…</text>
+      <text x="466" y="72" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">YR2</text>
     
-      <circle cx="28" cy="80" r="2.5" fill="#ff4d4d"/>
-      <text x="40" y="84" fill="#79b8ff" font-size="13" font-family="Arial">*.vfk6ymi8dr.viam.cloud</text>
-      <text x="690" y="84" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">YR1</text>
+      <circle cx="22" cy="87" r="2" fill="#ff4d4d"/>
+      <text x="32" y="90" fill="#79b8ff" font-size="12" font-family="Arial">*.eso-fla88097.eastus2.azur…</text>
+      <text x="466" y="90" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">YR2</text>
     
-      <circle cx="28" cy="102" r="2.5" fill="#ff4d4d"/>
-      <text x="40" y="106" fill="#79b8ff" font-size="13" font-family="Arial">*.kvtvxdt-qeb01228.us-west-2.aws.privatel…</text>
-      <text x="690" y="106" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">YR1</text>
+      <circle cx="22" cy="105" r="2" fill="#ff4d4d"/>
+      <text x="32" y="108" fill="#79b8ff" font-size="12" font-family="Arial">*.gpwvgwh-pxb66443.us-west-…</text>
+      <text x="466" y="108" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">YR2</text>
     
-      <circle cx="28" cy="124" r="2.5" fill="#ff4d4d"/>
-      <text x="40" y="128" fill="#79b8ff" font-size="13" font-family="Arial">*.kvtvxdt-qeb01228.us-west-2.aws.snowflak…</text>
-      <text x="690" y="128" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">YR1</text>
+      <circle cx="22" cy="123" r="2" fill="#ff4d4d"/>
+      <text x="32" y="126" fill="#79b8ff" font-size="12" font-family="Arial">*.gpwvgwh-pxb66443.us-west-…</text>
+      <text x="466" y="126" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">YR2</text>
     
-      <circle cx="28" cy="146" r="2.5" fill="#ff4d4d"/>
-      <text x="40" y="150" fill="#79b8ff" font-size="13" font-family="Arial">*.oagaviation-virgin-atlantic.westeurope.…</text>
-      <text x="690" y="150" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">YR2</text>
+      <circle cx="22" cy="141" r="2" fill="#ff4d4d"/>
+      <text x="32" y="144" fill="#79b8ff" font-size="12" font-family="Arial">*.mkbnfcc-kq21503.ap-south-…</text>
+      <text x="466" y="144" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">YR2</text>
     
-      <circle cx="28" cy="168" r="2.5" fill="#ff4d4d"/>
-      <text x="40" y="172" fill="#79b8ff" font-size="13" font-family="Arial">*.oagaviation-virgin-atlantic.westeurope.…</text>
-      <text x="690" y="172" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">YR2</text>
+      <circle cx="22" cy="159" r="2" fill="#ff4d4d"/>
+      <text x="32" y="162" fill="#79b8ff" font-size="12" font-family="Arial">*.mkbnfcc-kq21503.ap-south-…</text>
+      <text x="466" y="162" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">YR2</text>
     
   
-      <circle cx="720" cy="58" r="2.5" fill="#58a6ff"/>
-      <text x="732" y="62" fill="#c9d1d9" font-size="13" font-family="Arial">ak.cec6.e100fb.gamma.eu-west-3.7d1507.acm…</text>
-      <text x="1372" y="62" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">Amazon RSA 20…</text>
+      <circle cx="498" cy="69" r="2" fill="#58a6ff"/>
+      <text x="508" y="72" fill="#c9d1d9" font-size="12" font-family="Arial">canary.ap-southeast-7.ops.p…</text>
+      <text x="942" y="72" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">Amazon EC…</text>
     
-      <circle cx="720" cy="80" r="2.5" fill="#58a6ff"/>
-      <text x="732" y="84" fill="#c9d1d9" font-size="13" font-family="Arial">cQtgX.carrs.canary.test.sfdc.net</text>
-      <text x="1372" y="84" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">DigiCert Glob…</text>
+      <circle cx="498" cy="87" r="2" fill="#58a6ff"/>
+      <text x="508" y="90" fill="#c9d1d9" font-size="12" font-family="Arial">00c32757-6998-4dc7-86ae-57d…</text>
+      <text x="942" y="90" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">Amazon EC…</text>
     
-      <circle cx="720" cy="102" r="2.5" fill="#58a6ff"/>
-      <text x="732" y="106" fill="#c9d1d9" font-size="13" font-family="Arial">oOxPc.carrs.canary.test.sfdc.net</text>
-      <text x="1372" y="106" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">DigiCert Glob…</text>
+      <circle cx="498" cy="105" r="2" fill="#58a6ff"/>
+      <text x="508" y="108" fill="#c9d1d9" font-size="12" font-family="Arial">www.morenohillssda.org</text>
+      <text x="942" y="108" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">WE1</text>
     
-      <circle cx="720" cy="124" r="2.5" fill="#58a6ff"/>
-      <text x="732" y="128" fill="#c9d1d9" font-size="13" font-family="Arial">canary.ap-south-1.ops.prod.aura.acm.aws.d…</text>
-      <text x="1372" y="128" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">Amazon ECDSA …</text>
+      <circle cx="498" cy="123" r="2" fill="#58a6ff"/>
+      <text x="508" y="126" fill="#c9d1d9" font-size="12" font-family="Arial">qobservatory.com</text>
+      <text x="942" y="126" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">WE1</text>
     
-      <circle cx="720" cy="146" r="2.5" fill="#58a6ff"/>
-      <text x="732" y="150" fill="#c9d1d9" font-size="13" font-family="Arial">64ecad9e-9f81-4ec4-aa68-7e781d65223a.amdv…</text>
-      <text x="1372" y="150" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">Amazon ECDSA …</text>
+      <circle cx="498" cy="141" r="2" fill="#58a6ff"/>
+      <text x="508" y="144" fill="#c9d1d9" font-size="12" font-family="Arial">d7bde9089d51793793575022.ki…</text>
+      <text x="942" y="144" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">Amazon EC…</text>
     
-      <circle cx="720" cy="168" r="2.5" fill="#58a6ff"/>
-      <text x="732" y="172" fill="#c9d1d9" font-size="13" font-family="Arial">s3c2e.b798.e100fb.prod.ap-southeast-1.7d1…</text>
-      <text x="1372" y="172" fill="#6e7681" font-size="11" font-family="Arial" text-anchor="end">Amazon RSA 20…</text>
+      <circle cx="498" cy="159" r="2" fill="#58a6ff"/>
+      <text x="508" y="162" fill="#c9d1d9" font-size="12" font-family="Arial">san0.d7bde9089d517937935750…</text>
+      <text x="942" y="162" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">Amazon EC…</text>
     
 
-  <text x="28" y="200" fill="#484f58" font-size="11" font-family="Arial">certificate transparency · updates every 30m</text>
+  <text x="18" y="192" fill="#484f58" font-size="10" font-family="Arial">certificate transparency · updates every 30m</text>
 </svg>
