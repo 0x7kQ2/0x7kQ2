@@ -169,25 +169,25 @@ async function collectFromCT() {
     throw new Error("No CT DNS names found in recent log window");
   }
 
-  const W = 960;
-  const H = 200;
-  const midX = 480;
-  const pad = 18;
-  const labelY = 48;
-  const startY = 72;
-  const lineHeight = 18;
+  const W = 1200;
+  const H = 250;
+  const midX = 600;
+  const pad = 22;
+  const labelY = 56;
+  const startY = 84;
+  const lineHeight = 22;
   const leftX = pad;
-  const rightX = midX + 14;
-  const leftIssuerX = midX - 14;
+  const rightX = midX + 18;
+  const leftIssuerX = midX - 16;
   const rightIssuerX = W - pad;
 
   const leftRows = wildcards
     .map((v, i) => {
       const y = startY + i * lineHeight;
       return `
-      <circle cx="${leftX + 4}" cy="${y - 3}" r="2" fill="#ff4d4d"/>
-      <text x="${leftX + 14}" y="${y}" fill="#79b8ff" font-size="12" font-family="Arial">${escapeXML(clip(v.name, 28))}</text>
-      <text x="${leftIssuerX}" y="${y}" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">${escapeXML(clip(v.issuer, 10))}</text>
+      <circle cx="${leftX + 4}" cy="${y - 4}" r="2.5" fill="#ff4d4d"/>
+      <text x="${leftX + 16}" y="${y}" fill="#79b8ff" font-size="14" font-family="Arial">${escapeXML(clip(v.name, 34))}</text>
+      <text x="${leftIssuerX}" y="${y}" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">${escapeXML(clip(v.issuer, 12))}</text>
     `;
     })
     .join("");
@@ -196,36 +196,36 @@ async function collectFromCT() {
     .map((v, i) => {
       const y = startY + i * lineHeight;
       return `
-      <circle cx="${rightX + 4}" cy="${y - 3}" r="2" fill="#58a6ff"/>
-      <text x="${rightX + 14}" y="${y}" fill="#c9d1d9" font-size="12" font-family="Arial">${escapeXML(clip(v.name, 28))}</text>
-      <text x="${rightIssuerX}" y="${y}" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">${escapeXML(clip(v.issuer, 10))}</text>
+      <circle cx="${rightX + 4}" cy="${y - 4}" r="2.5" fill="#58a6ff"/>
+      <text x="${rightX + 16}" y="${y}" fill="#c9d1d9" font-size="14" font-family="Arial">${escapeXML(clip(v.name, 34))}</text>
+      <text x="${rightIssuerX}" y="${y}" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">${escapeXML(clip(v.issuer, 12))}</text>
     `;
     })
     .join("");
 
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
-  <rect width="${W}" height="${H}" rx="10" fill="#0d1117"/>
-  <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="9" fill="none" stroke="#21262d"/>
+  <rect width="${W}" height="${H}" rx="12" fill="#0d1117"/>
+  <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="11" fill="none" stroke="#21262d"/>
 
   <!-- header -->
-  <rect x="0" y="0" width="${W}" height="32" rx="10" fill="#161b22"/>
-  <rect x="0" y="22" width="${W}" height="10" fill="#161b22"/>
-  <rect x="0" y="31" width="${W}" height="1" fill="#30363d"/>
+  <rect x="0" y="0" width="${W}" height="36" rx="12" fill="#161b22"/>
+  <rect x="0" y="26" width="${W}" height="10" fill="#161b22"/>
+  <rect x="0" y="35" width="${W}" height="1" fill="#30363d"/>
 
-  <text x="${pad}" y="21" fill="#8b949e" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1.2">CT SNIFFER</text>
-  <text x="${W - pad}" y="21" fill="#6e7681" font-size="10" font-family="Arial" text-anchor="end">Argon2026h2 · ${escapeXML(String(treeSize))}</text>
+  <text x="${pad}" y="24" fill="#8b949e" font-size="13" font-family="Arial" font-weight="bold" letter-spacing="1.2">CT SNIFFER</text>
+  <text x="${W - pad}" y="24" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Argon2026h2 · ${escapeXML(String(treeSize))}</text>
 
   <!-- column labels (clear gap above first row) -->
-  <text x="${leftX}" y="${labelY}" fill="#ff7b72" font-size="10" font-family="Arial" font-weight="bold">WILDCARD</text>
-  <text x="${rightX}" y="${labelY}" fill="#58a6ff" font-size="10" font-family="Arial" font-weight="bold">NAME</text>
+  <text x="${leftX}" y="${labelY}" fill="#ff7b72" font-size="12" font-family="Arial" font-weight="bold">WILDCARD</text>
+  <text x="${rightX}" y="${labelY}" fill="#58a6ff" font-size="12" font-family="Arial" font-weight="bold">NAME</text>
 
-  <line x1="${midX}" y1="38" x2="${midX}" y2="178" stroke="#21262d"/>
+  <line x1="${midX}" y1="44" x2="${midX}" y2="222" stroke="#21262d"/>
 
   ${leftRows}
   ${rightRows}
 
-  <text x="${pad}" y="192" fill="#484f58" font-size="10" font-family="Arial">certificate transparency · updates every 30m</text>
+  <text x="${pad}" y="238" fill="#484f58" font-size="11" font-family="Arial">certificate transparency · updates every 30m</text>
 </svg>
 `;
 
