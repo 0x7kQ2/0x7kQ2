@@ -9,7 +9,7 @@
   <rect x="0" y="35" width="1400" height="1" fill="#30363d"/>
 
   <text x="28" y="24" fill="#8b949e" font-size="13" font-family="Arial" font-weight="bold" letter-spacing="1.2">CT SNIFFER</text>
-  <text x="1372" y="24" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Argon2026h2 · 3497454583</text>
+  <text x="1372" y="24" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Argon2026h2 · 3498160318</text>
 
   <!-- column labels (clear gap above first row) -->
   <text x="28" y="56" fill="#ff7b72" font-size="12" font-family="Arial" font-weight="bold">WILDCARD</text>
@@ -19,53 +19,53 @@
 
   
       <circle cx="32" cy="80" r="2.5" fill="#ff4d4d"/>
-      <text x="44" y="84" fill="#79b8ff" font-size="14" font-family="Arial">*.phillipschoate.com</text>
-      <text x="682" y="84" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">WE1</text>
+      <text x="44" y="84" fill="#79b8ff" font-size="14" font-family="Arial">*.z1b.w.api.fabric.microsoft-int.com</text>
+      <text x="682" y="84" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Microsoft TLS…</text>
     
       <circle cx="32" cy="102" r="2.5" fill="#ff4d4d"/>
-      <text x="44" y="106" fill="#79b8ff" font-size="14" font-family="Arial">*.r39-hihuay.com</text>
-      <text x="682" y="106" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">WE1</text>
+      <text x="44" y="106" fill="#79b8ff" font-size="14" font-family="Arial">*.z1b.userdatafunctions.fabric.microsoft-…</text>
+      <text x="682" y="106" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Microsoft TLS…</text>
     
       <circle cx="32" cy="124" r="2.5" fill="#ff4d4d"/>
-      <text x="44" y="128" fill="#79b8ff" font-size="14" font-family="Arial">*.4a77.e100fb.prod.mx-central-1.7d1507.ac…</text>
-      <text x="682" y="128" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Amazon RSA 20…</text>
+      <text x="44" y="128" fill="#79b8ff" font-size="14" font-family="Arial">*.z1b.graphql.fabric.microsoft-int.com</text>
+      <text x="682" y="128" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Microsoft TLS…</text>
     
       <circle cx="32" cy="146" r="2.5" fill="#ff4d4d"/>
-      <text x="44" y="150" fill="#79b8ff" font-size="14" font-family="Arial">*.whghonb-tg33686.us-east-2.aws.privateli…</text>
-      <text x="682" y="150" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">YR1</text>
+      <text x="44" y="150" fill="#79b8ff" font-size="14" font-family="Arial">*.phl789.best</text>
+      <text x="682" y="150" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">WE1</text>
     
       <circle cx="32" cy="168" r="2.5" fill="#ff4d4d"/>
-      <text x="44" y="172" fill="#79b8ff" font-size="14" font-family="Arial">*.whghonb-tg33686.us-east-2.aws.snowflake…</text>
-      <text x="682" y="172" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">YR1</text>
+      <text x="44" y="172" fill="#79b8ff" font-size="14" font-family="Arial">*.e0817ceddb04e7.intcloudg2.azurecertific…</text>
+      <text x="682" y="172" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">DigiCert Basi…</text>
     
       <circle cx="32" cy="190" r="2.5" fill="#ff4d4d"/>
-      <text x="44" y="194" fill="#79b8ff" font-size="14" font-family="Arial">*.zc9sed4e3x.local.viam.cloud</text>
-      <text x="682" y="194" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">YR2</text>
+      <text x="44" y="194" fill="#79b8ff" font-size="14" font-family="Arial">*.b68e.e100fb.prod.us-west-2.7d1507.acm-a…</text>
+      <text x="682" y="194" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Amazon RSA 20…</text>
     
   
       <circle cx="724" cy="80" r="2.5" fill="#58a6ff"/>
-      <text x="736" y="84" fill="#c9d1d9" font-size="14" font-family="Arial">phillipschoate.com</text>
-      <text x="1372" y="84" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">WE1</text>
+      <text x="736" y="84" fill="#c9d1d9" font-size="14" font-family="Arial">82a36a545ba1794324015221.dub.prod.canarie…</text>
+      <text x="1372" y="84" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Amazon ECDSA …</text>
     
       <circle cx="724" cy="102" r="2.5" fill="#58a6ff"/>
-      <text x="736" y="106" fill="#c9d1d9" font-size="14" font-family="Arial">canary.ap-southeast-7.ops.prod.aura.acm.a…</text>
-      <text x="1372" y="106" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Amazon RSA 20…</text>
+      <text x="736" y="106" fill="#c9d1d9" font-size="14" font-family="Arial">san0.82a36a545ba1794324015221.dub.prod.ca…</text>
+      <text x="1372" y="106" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Amazon ECDSA …</text>
     
       <circle cx="724" cy="124" r="2.5" fill="#58a6ff"/>
-      <text x="736" y="128" fill="#c9d1d9" font-size="14" font-family="Arial">f566fe99-8835-468d-b3f6-1902a0d4da17.amdv…</text>
+      <text x="736" y="128" fill="#c9d1d9" font-size="14" font-family="Arial">fin.7ff2.e100fb.prod.ap-southeast-1.7d150…</text>
       <text x="1372" y="128" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Amazon RSA 20…</text>
     
       <circle cx="724" cy="146" r="2.5" fill="#58a6ff"/>
-      <text x="736" y="150" fill="#c9d1d9" font-size="14" font-family="Arial">r39-hihuay.com</text>
-      <text x="1372" y="150" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">WE1</text>
+      <text x="736" y="150" fill="#c9d1d9" font-size="14" font-family="Arial">fin.c158.e100fb.gamma.ap-northeast-2.7d15…</text>
+      <text x="1372" y="150" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Amazon RSA 20…</text>
     
       <circle cx="724" cy="168" r="2.5" fill="#58a6ff"/>
-      <text x="736" y="172" fill="#c9d1d9" font-size="14" font-family="Arial">canary.ap-south-1.ops.prod.aura.acm.aws.d…</text>
-      <text x="1372" y="172" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Amazon ECDSA …</text>
+      <text x="736" y="172" fill="#c9d1d9" font-size="14" font-family="Arial">resume.786bartend.com</text>
+      <text x="1372" y="172" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">WE1</text>
     
       <circle cx="724" cy="190" r="2.5" fill="#58a6ff"/>
-      <text x="736" y="194" fill="#c9d1d9" font-size="14" font-family="Arial">97b76636-2563-4d23-8a8e-3b7eb1a81595.amdv…</text>
-      <text x="1372" y="194" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Amazon ECDSA …</text>
+      <text x="736" y="194" fill="#c9d1d9" font-size="14" font-family="Arial">r1f3f.6ed8.e100fb.prod.ap-south-2.7d1507.…</text>
+      <text x="1372" y="194" fill="#6e7681" font-size="12" font-family="Arial" text-anchor="end">Amazon RSA 20…</text>
     
 
   <text x="28" y="238" fill="#484f58" font-size="11" font-family="Arial">certificate transparency · updates every 30m</text>
